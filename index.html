@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>James O'Donnell — Bar Manager & Mixologist</title>
+<title>James O'Donnell — Bar Manager & Mixologist, New Orleans</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500&display=swap');
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -68,6 +68,28 @@
     font-weight: 300;
     font-size: 1.05rem;
     color: #ccc5b8;
+  }
+
+  .philosophy {
+    text-align: center;
+    padding: 28px 24px;
+    margin: 32px 0;
+  }
+
+  .philosophy blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #f5f0e8;
+    margin-bottom: 8px;
+  }
+
+  .philosophy .attr {
+    font-size: 0.8rem;
+    color: #777;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
   }
 
   .expertise-grid {
@@ -151,6 +173,49 @@
     color: #ccc5b8;
   }
 
+  .current-project {
+    background: #1a1714;
+    border: 1px solid #2a2520;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 24px 0;
+  }
+
+  .current-project h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: #f5f0e8;
+    margin-bottom: 8px;
+  }
+
+  .current-project p {
+    font-weight: 300;
+    font-size: 0.95rem;
+    color: #b0a898;
+  }
+
+  .press-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .press-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #1a1714;
+    font-weight: 300;
+    font-size: 0.95rem;
+    color: #b0a898;
+  }
+
+  .press-list li:last-child { border-bottom: none; }
+
+  .press-list a {
+    color: #c4a882;
+    text-decoration: none;
+  }
+
+  .press-list a:hover { text-decoration: underline; }
+
   .education .role { border-left-color: #1a1714; }
   .education .role:hover { border-left-color: #c4a882; }
 
@@ -184,6 +249,7 @@
   @media (max-width: 600px) {
     .container { padding: 40px 20px; }
     h1 { font-size: 2rem; }
+    .philosophy blockquote { font-size: 1.2rem; }
     .expertise-grid { grid-template-columns: 1fr; }
   }
 
@@ -191,9 +257,10 @@
     body { background: #fff; color: #222; }
     h1 { color: #111; }
     h2, .tagline, .expertise-item strong, .venue { color: #555; }
-    .expertise-item { background: #f5f5f5; border-color: #ddd; }
-    .role li, .profile p, .expertise-item span { color: #333; }
+    .expertise-item, .current-project { background: #f5f5f5; border-color: #ddd; }
+    .role li, .profile p, .expertise-item span, .current-project p { color: #333; }
     .highlight { background: #f9f6f1; border-left-color: #999; color: #333; }
+    .philosophy blockquote { color: #222; }
     .role { border-left-color: #ddd; }
     footer { display: none; }
   }
@@ -204,7 +271,7 @@
 
   <header>
     <h1>James O'Donnell</h1>
-    <div class="tagline">Bar Manager &middot; Mixologist &middot; Beverage Program Specialist</div>
+    <div class="tagline">Bartender &middot; New Orleans</div>
     <div class="location">New Orleans, LA</div>
   </header>
 
@@ -213,32 +280,50 @@
     <div class="caption">Preparing the Obituary Cocktail at Fives &mdash; Photo: Christopher Angeles</div>
   </div>
 
+  <div class="philosophy">
+    <blockquote>&ldquo;Hospitality beats complexity.&rdquo;</blockquote>
+    <div class="attr">Precision in the glass. Pharcyde on the speakers.</div>
+  </div>
+
   <section class="profile">
     <h2>Profile</h2>
-    <p>A prominent figure in the New Orleans cocktail industry with a reputation for reviving classic beverage traditions through modern, sophisticated techniques. Expert in high-volume luxury hospitality, beverage program design, and advanced mixology methods including fat-washing and clarification. Dedicated to balancing technical complexity with a guest-first service philosophy.</p>
+    <p>I make drinks, run bars, and take care of people. I like classic cocktails, good music, and getting the details right. I've been lucky to learn from great people and work in places that let me do things my way.</p>
   </section>
 
-  <div class="highlight">Featured in <strong>The New York Times</strong> for cocktail revival work &mdash; the resurrection of the Obituary Cocktail.</div>
+  <section class="profile">
+    <h2>Objective</h2>
+    <p>Just moved back home to North Carolina after eight years in New Orleans. Looking for the right bar &mdash; somewhere I can bring what I learned and keep growing.</p>
+  </section>
+
+  <div class="highlight">The New York Times wrote about the Obituary Cocktail. I just make the drink.</div>
 
   <section>
     <h2>Core Expertise</h2>
     <div class="expertise-grid">
       <div class="expertise-item">
         <strong>Advanced Mixology</strong>
-        <span>Fat-washing, clarification, classic & refined techniques</span>
+        <span>Fat-washing, clarification, martini programs, classic technique</span>
       </div>
       <div class="expertise-item">
         <strong>Menu Development</strong>
-        <span>Concept creation, signature cocktail design</span>
+        <span>Concept menus, cocktail progressions, original drinks</span>
+      </div>
+      <div class="expertise-item">
+        <strong>Vibe Control</strong>
+        <span>Music, lighting, reading the room</span>
       </div>
       <div class="expertise-item">
         <strong>Hospitality Leadership</strong>
-        <span>Staff mentorship, guest experience, bar operations</span>
+        <span>Training people, taking care of guests</span>
       </div>
-      <div class="expertise-item">
-        <strong>Press & Recognition</strong>
-        <span>National media coverage, industry visibility</span>
-      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Current Project</h2>
+    <div class="current-project">
+      <h3>Lab Cabin California</h3>
+      <p>A cocktail menu paired with The Pharcyde's discography. Each drink maps to a track. Still working on it.</p>
     </div>
   </section>
 
@@ -249,9 +334,9 @@
       <h3>Bar Manager</h3>
       <div class="venue">Fives &mdash; New Orleans, LA &middot; Current</div>
       <ul>
-        <li>Oversees the beverage program for a premier oyster and cocktail bar in the French Quarter</li>
-        <li>Focuses on execution of classic and refined cocktail techniques</li>
-        <li>Revived the "Obituary" Cocktail (Gin, Vermouth, and Absinthe), earning national recognition in The New York Times</li>
+        <li>Beverage program for an oyster and cocktail bar on Jackson Square</li>
+        <li>Brought back the Obituary Cocktail &mdash; gin, vermouth, absinthe</li>
+        <li>Handle the music and the lights too</li>
       </ul>
     </div>
 
@@ -259,9 +344,9 @@
       <h3>Lead Bartender</h3>
       <div class="venue">Chemin &agrave; la Mer, Four Seasons Hotel &mdash; New Orleans, LA</div>
       <ul>
-        <li>Led the bar team within a high-end luxury hotel environment</li>
-        <li>Designed and implemented the "Paris in the Springtime" menu, featuring signature creations including La Fleur Jolie and The Parisian Cobbler</li>
-        <li>Managed beverage operations to meet Four Seasons' global standards of hospitality</li>
+        <li>Ran the bar team at the Four Seasons</li>
+        <li>Built the "Paris in the Springtime" menu &mdash; La Fleur Jolie, The Parisian Cobbler</li>
+        <li>Ordering, costing, training, the whole operation</li>
       </ul>
     </div>
 
@@ -269,25 +354,41 @@
       <h3>Bartender</h3>
       <div class="venue">Alley 26 &mdash; Durham, NC</div>
       <ul>
-        <li>Honed advanced craft cocktail skills in a renowned high-end bar setting</li>
-        <li>Developed foundational style under the mentorship of industry veterans</li>
+        <li>Learned how to make drinks properly</li>
+        <li>Great people to learn from</li>
       </ul>
     </div>
   </section>
 
+  <section>
+    <h2>Press</h2>
+    <ul class="press-list">
+      <li><strong>The New York Times</strong> &mdash; The Obituary Cocktail at Fives</li>
+      <li><a href="https://chilledmagazine.com/meet-nola-bar-chemin-a-la-mer-lead-bartender-james-odonnell/">Chilled Magazine</a> &mdash; Profile: Lead Bartender, Chemin &agrave; la Mer</li>
+      <li><a href="https://www.nola.com/gambit/food_drink/fives-is-a-chic-oyster-and-cocktail-bar-on-jackson-square/article_9c6d1dee-6d0f-11ee-81e0-db667f2e6bf6.html">Gambit / nola.com</a> &mdash; Fives: A Chic Oyster and Cocktail Bar on Jackson Square</li>
+    </ul>
+  </section>
+
   <section class="education">
-    <h2>Education & Mentorship</h2>
+    <h2>Mentorship &amp; Training</h2>
     <div class="role">
-      <h3>Professional Mentorship</h3>
-      <div class="venue">Under Abigail Gullo &mdash; New Orleans</div>
+      <h3>Abigail Gullo</h3>
+      <div class="venue">New Orleans</div>
       <ul>
-        <li>Trained under New Orleans industry veteran, focusing on stylistic development and industry standards</li>
+        <li>Learned more from Abigail than anyone. She taught me how to think about this work.</li>
       </ul>
     </div>
     <div class="role">
-      <h3>Technical Training</h3>
+      <h3>Shannon Healy</h3>
+      <div class="venue">Alley Twenty Six &mdash; Durham, NC</div>
       <ul>
-        <li>Specialized in advanced methods of spirit infusion and liquid clarification</li>
+        <li>Where it started. Shannon built something real in Durham and let me be part of it.</li>
+      </ul>
+    </div>
+    <div class="role">
+      <h3>Technical Specialization</h3>
+      <ul>
+        <li>Fat-washing, clarification, infusions &mdash; the stuff that makes a drink interesting</li>
       </ul>
     </div>
   </section>
