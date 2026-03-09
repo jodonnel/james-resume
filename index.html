@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>James O'Donnell — Bar Manager & Mixologist</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #0d0d0d;
+    color: #e8e0d4;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 32px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 48px;
+    border-bottom: 1px solid #2a2520;
+    padding-bottom: 40px;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #f5f0e8;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #c4a882;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .location {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: #888;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #c4a882;
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  section { margin-bottom: 40px; }
+
+  .profile p {
+    font-weight: 300;
+    font-size: 1.05rem;
+    color: #ccc5b8;
+  }
+
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .expertise-item {
+    background: #1a1714;
+    border: 1px solid #2a2520;
+    border-radius: 6px;
+    padding: 14px 18px;
+  }
+
+  .expertise-item strong {
+    display: block;
+    font-size: 0.85rem;
+    color: #c4a882;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+
+  .expertise-item span {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #b0a898;
+  }
+
+  .role {
+    margin-bottom: 28px;
+    padding-left: 20px;
+    border-left: 2px solid #2a2520;
+  }
+
+  .role:hover { border-left-color: #c4a882; }
+
+  .role h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: #f5f0e8;
+    margin-bottom: 2px;
+  }
+
+  .role .venue {
+    font-size: 0.9rem;
+    color: #c4a882;
+    margin-bottom: 8px;
+  }
+
+  .role ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .role li {
+    font-weight: 300;
+    font-size: 0.95rem;
+    color: #b0a898;
+    padding: 3px 0;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .role li::before {
+    content: "\2014";
+    position: absolute;
+    left: 0;
+    color: #555;
+  }
+
+  .highlight {
+    background: linear-gradient(90deg, rgba(196,168,130,0.15), transparent);
+    border-left: 3px solid #c4a882;
+    padding: 14px 18px;
+    border-radius: 0 6px 6px 0;
+    margin: 20px 0;
+    font-style: italic;
+    font-weight: 300;
+    color: #ccc5b8;
+  }
+
+  .education .role { border-left-color: #1a1714; }
+  .education .role:hover { border-left-color: #c4a882; }
+
+  .hero {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .hero img {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  }
+
+  .hero .caption {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #777;
+  }
+
+  footer {
+    text-align: center;
+    padding-top: 32px;
+    border-top: 1px solid #2a2520;
+    font-size: 0.8rem;
+    color: #555;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 40px 20px; }
+    h1 { font-size: 2rem; }
+    .expertise-grid { grid-template-columns: 1fr; }
+  }
+
+  @media print {
+    body { background: #fff; color: #222; }
+    h1 { color: #111; }
+    h2, .tagline, .expertise-item strong, .venue { color: #555; }
+    .expertise-item { background: #f5f5f5; border-color: #ddd; }
+    .role li, .profile p, .expertise-item span { color: #333; }
+    .highlight { background: #f9f6f1; border-left-color: #999; color: #333; }
+    .role { border-left-color: #ddd; }
+    footer { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>James O'Donnell</h1>
+    <div class="tagline">Bar Manager &middot; Mixologist &middot; Beverage Program Specialist</div>
+    <div class="location">New Orleans, LA</div>
+  </header>
+
+  <div class="hero">
+    <img src="james-hero.jpg" alt="James O'Donnell preparing the Obituary Cocktail at Fives, New Orleans">
+    <div class="caption">Preparing the Obituary Cocktail at Fives &mdash; Photo: Christopher Angeles</div>
+  </div>
+
+  <section class="profile">
+    <h2>Profile</h2>
+    <p>A prominent figure in the New Orleans cocktail industry with a reputation for reviving classic beverage traditions through modern, sophisticated techniques. Expert in high-volume luxury hospitality, beverage program design, and advanced mixology methods including fat-washing and clarification. Dedicated to balancing technical complexity with a guest-first service philosophy.</p>
+  </section>
+
+  <div class="highlight">Featured in <strong>The New York Times</strong> for cocktail revival work &mdash; the resurrection of the Obituary Cocktail.</div>
+
+  <section>
+    <h2>Core Expertise</h2>
+    <div class="expertise-grid">
+      <div class="expertise-item">
+        <strong>Advanced Mixology</strong>
+        <span>Fat-washing, clarification, classic & refined techniques</span>
+      </div>
+      <div class="expertise-item">
+        <strong>Menu Development</strong>
+        <span>Concept creation, signature cocktail design</span>
+      </div>
+      <div class="expertise-item">
+        <strong>Hospitality Leadership</strong>
+        <span>Staff mentorship, guest experience, bar operations</span>
+      </div>
+      <div class="expertise-item">
+        <strong>Press & Recognition</strong>
+        <span>National media coverage, industry visibility</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="role">
+      <h3>Bar Manager</h3>
+      <div class="venue">Fives &mdash; New Orleans, LA &middot; Current</div>
+      <ul>
+        <li>Oversees the beverage program for a premier oyster and cocktail bar in the French Quarter</li>
+        <li>Focuses on execution of classic and refined cocktail techniques</li>
+        <li>Revived the "Obituary" Cocktail (Gin, Vermouth, and Absinthe), earning national recognition in The New York Times</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <h3>Lead Bartender</h3>
+      <div class="venue">Chemin &agrave; la Mer, Four Seasons Hotel &mdash; New Orleans, LA</div>
+      <ul>
+        <li>Led the bar team within a high-end luxury hotel environment</li>
+        <li>Designed and implemented the "Paris in the Springtime" menu, featuring signature creations including La Fleur Jolie and The Parisian Cobbler</li>
+        <li>Managed beverage operations to meet Four Seasons' global standards of hospitality</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <h3>Bartender</h3>
+      <div class="venue">Alley 26 &mdash; Durham, NC</div>
+      <ul>
+        <li>Honed advanced craft cocktail skills in a renowned high-end bar setting</li>
+        <li>Developed foundational style under the mentorship of industry veterans</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="education">
+    <h2>Education & Mentorship</h2>
+    <div class="role">
+      <h3>Professional Mentorship</h3>
+      <div class="venue">Under Abigail Gullo &mdash; New Orleans</div>
+      <ul>
+        <li>Trained under New Orleans industry veteran, focusing on stylistic development and industry standards</li>
+      </ul>
+    </div>
+    <div class="role">
+      <h3>Technical Training</h3>
+      <ul>
+        <li>Specialized in advanced methods of spirit infusion and liquid clarification</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    James O'Donnell &middot; New Orleans, LA
+  </footer>
+
+</div>
+</body>
+</html>
